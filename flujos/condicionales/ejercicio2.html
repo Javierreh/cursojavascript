@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notas</title>
+</head>
+<body>
+	<script>
+
+		// PORTERO DE DISCOTECA
+		// en funcion de la edad (bienvenido o fuera).
+
+		var edad = prompt("Hola, ¿que edad tienes?");
+
+		const EDAD_CORTE = 18;
+
+		if (edad < EDAD_CORTE) {
+			alert("FUERA!!!!");
+		}
+		else {
+			alert("BIENVENIDO!!!");
+		}
+
+
+// siempre que evaluemos una condicion, poner siempre la mas restrictiva, y la menos para el escape
+
+
+		// con operador ternario
+
+		var entras = (edad < EDAD_CORTE)? false : true;
+
+
+	</script>
+</body>
+</html>

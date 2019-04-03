@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Switch</title>
+</head>
+<body>
+	<script>
+		
+		var color = prompt("Dame un color");
+
+		color = color.toLowerCase();
+		// color = color.toUpperCase();
+		// color = color.toCapitalize();
+
+		switch(color) {
+			case "rojo":
+			case "bermellon":
+			case "tomato":
+				alert("red");
+			break;
+
+			case "azul":
+				alert("blue");
+			break;
+
+			case "amarillo":
+				alert("yellow");
+			break;
+
+			default:
+				alert("Color no conocido");
+			break;
+		}
+
+	</script>
+</body>
+</html>

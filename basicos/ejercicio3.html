@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3: Calcular facturas</title>
+</head>
+<body>
+
+	<script>
+		
+		//dada una cantidad pedida por pantalla, necesito que me calcules el valor a facturar.
+		//si el IVA es el 21%, quiero que me calcules el PvP de cualquier valor metido por pantalla.
+
+		var cantidad = prompt("Introduce el valor a facturar");
+		const IVA = 0.21;
+
+		var resultado = parseFloat(cantidad) * (1 + IVA);
+
+		alert("La cantidad del valor con el IVA es: " + resultado);
+
+	</script>
+
+	
+</body>
+</html>

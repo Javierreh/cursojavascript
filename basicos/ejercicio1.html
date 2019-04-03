@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+
+	<script>
+		
+		//dado 54321 segundos, calcula las horas, minutos y segundos que hay en esa cantidad de segundos dados.
+
+		// var num = 54321;
+		// var segundos;
+		// var minutos;
+		// var horas;
+
+		// minutos = num / 60;
+		// horas = minutos / 60;
+		// restoSegundos = horas % 60;
+
+
+		// alert(minutos);
+		// alert(horas);
+		// alert(restoSegundos);
+
+
+		//qué me dan
+		var segundosDados = prompt("Dame una cantidad de segundos");
+
+		//qué me piden
+		var horas;
+		var minutos;
+		var segundosRestantes;
+
+		horas = segundosDados / (60 * 60);
+		horas = parseInt(horas) //me devuelve la parte entera
+
+		segundosRestantes = segundosDados % (60 * 60);
+
+		minutos = segundosRestantes / 60;
+		minutos = parseInt(minutos);
+
+		segundosRestantes = segundosRestantes % 60;
+
+		alert("En " + segundosDados + " hay " + horas + " horas, " + minutos + " minutos y " + segundosRestantes + " segundos.");
+
+
+
+
+	</script>
+
+	
+</body>
+</html>
