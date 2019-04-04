@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1 de funciones</title>
+</head>
+	<style>
+		div {
+			background-color: red;
+		}
+	</style>
+<body>
+
+	<script>
+		
+		//Pideme por pantalla 1 figura de dos posibles: cuadrado o circulo. Cuando elijas figura tienes que pedir, si es cuadrado, alto y ancho, y si es circulo el radio.
+
+		do {
+			var figura = prompt("Elige: cuadrado o circulo").toLowerCase();
+		} while (figura != "cuadrado" && figura != "circulo");
+
+		if (figura == "cuadrado") {
+			var altoCuadrado = prompt("Dame un alto para el circulo");
+			var anchoCuadrado = prompt("Dame un ancho para el circulo");
+			dibujarCuadrado(altoCuadrado, anchoCuadrado);
+		}
+		else {
+			var radioCuadrado = prompt("Dame un radio para el circulo");
+			dibujarCirculo(radioCuadrado);
+		}
+
+		
+		function dibujarCuadrado(pAlto, pAncho) {
+			var alto = pAlto;
+			var ancho = pAncho;
+			document.write('<div style="height: ' + alto + 'px; width: ' + ancho + 'px"></div>');
+		}
+
+		function dibujarCirculo(pRadio) {
+			var ancho = pRadio*2;
+			document.write('<div style="height: ' + ancho + 'px; width: ' + ancho + 'px; border-radius: ' + pRadio + 'px"></div>');
+		}
+
+		
+	</script>
+	
+</body>
+</html>

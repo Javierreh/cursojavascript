@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Función que reciben parametros</title>
+</head>
+<body>
+	<script>
+		
+		var alto = 100;
+		var ancho = 100;
+		var color = "tomato";
+
+		function dibujarFigura(pAncho, pAlto, pColor) {
+			var anchito = pAncho;
+			var altito = pAlto;
+			var colorcito = pColor;
+
+			document.write('<div style="width: ' + anchito + '; height: ' + altito + 'px; background-color:' + colorcito + '"></div>');
+		}
+
+		dibujarFigura(alto, ancho, color);
+		dibujarFigura(300, 100, "indigo");
+		dibujarFigura(20, 20, "red");
+
+		var miAlto = prompt("Dame un alto");
+		var miAncho = prompt("Dame un ancho");
+		var miColor = prompt("Dame un color");
+
+		dibujarFigura(miAncho, miAlto, miColor);
+
+	</script>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carrito compra</title>
+</head>
+<body>
+
+	<script>
+		
+		var stock = parseInt(prompt("Dime el stock actual"));
+
+		function getStock() {
+			console.log(stock);
+		}
+
+		function comprarProducto(pCantidad) {
+			if (pCantidad <= stock) {
+				stock = stock - pCantidad;
+				return notificar();
+			} 
+			else {
+				console.log("No tengo suficiente producto en la tienda, el stock es de: " + stock+ ".");
+			}
+		}
+
+		function addStock(pCantidad) {
+			stock = stock + pCantidad;
+			getStock();
+		}
+
+		function notificar() {
+			var mensaje = (stock <= 5) ? "Te quedan " + stock + " unidades. COMPRAR!!!" : "Tu stock es suficiente.";
+			return mensaje;
+		}
+
+
+
+//si la variable es global, usar console.log en vez de return
+	</script>
+	
+</body>
+</html>

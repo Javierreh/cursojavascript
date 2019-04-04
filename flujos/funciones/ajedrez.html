@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablero de Ajedrez</title>
+
+	<style>
+		
+	body {
+		background-color: gray;
+	}
+
+	.row {
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+	}
+
+	</style>
+</head>
+<body>
+	<script>
+		
+		var sizeCuadrado = parseInt(prompt("De qué tamaño lo quieres?"));
+		var elementosFila = parseInt(prompt("Cuantos cuadros quieres por fila?"));
+		var color = prompt("black or white??");
+
+		dibujarTablero(elementosFila);
+
+		function dibujarFila(pSize, pNumeroElementos, pColor) {
+			
+			var fila = "";
+
+			for (var i = 1; i <= pNumeroElementos; i++) {
+
+				if (pColor == "white") {
+					var color = (i % 2 == 0) ? 'black' : 'white';
+				}
+				else {
+					var color = (i % 2 == 0) ? 'white' : 'black';
+				}
+
+				fila += '<div style="width: ' + pSize + 'px; height: ' + pSize + 'px; background-color: ' + color + '; float: left"></div>';
+			}
+
+			document.write('<div class="row">' + fila + '</div>')
+				
+		}
+
+
+		function dibujarTablero (pNumeroFilas) {
+			for (var i = 1; i <= elementosFila; i++) {
+				if (color == "black") {
+					dibujarFila(sizeCuadrado, elementosFila, color);
+					color = "white";
+				}
+				else {
+					dibujarFila(sizeCuadrado, elementosFila, color);
+					color = "black";
+				}
+				
+			}
+		}
+
+
+		
+
+
+
+
+
+
+	</script>
+</body>
+</html>

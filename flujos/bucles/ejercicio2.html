@@ -2,63 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ejercicio de Bucle 2</title>
+	<title>Ejercicio 2: do while</title>
 </head>
-
-	<style>
-
-		div {
-			margin-bottom: 10px;
-			border: 2px solid #000;
-			box-sizing: border-box;
-		}
-
-		.rojo {
-			background-color: red;
-		}
-
-		.verde {
-			background-color: green;
-		}
-	
-		.azul {
-			background-color: blue;
-		}
-
-		.amarillo {
-			background-color: yellow;
-		}
-
-	</style>
-
 <body>
-	
-	<!-- <div class="rojo"></div> -->
-	<!-- <div class="gris"></div> -->
-<!--<div class="gris" style="width:100px; height:100px" ></div>-->
 
 	<script>
+		
+		//quiero que me des un numero por pantalla, y si me das un numero sacame su ultimo digito. Pero si introduces otra cosa que no sea numero me volveras a pedir el numero por pantalla hasta que sea un numero
 
-		//quiero que me pidas por pantalla cuantas cartas quieres, luego que me pidas de que color las quieres, opciones: rojo, verde, azul
-		//objetivo: sacar el numero de cartas que me pidas del color que me pidas
-		//BOLA EXTRA: las cartas tengan la posibilidad de tener un tamaño concreto pasado pasado por pantalla
+		do {
+			var num = prompt("Dame un número");
+		} while (isNaN(num))
 
-		var numCartas = prompt("Cuantas cartas quieres?");
-		var colorCartas = prompt("De que color las quieres? Rojo, Verde o Azul").toLowerCase();
+		var ultimoDigito = num % 10;
 
-		if (colorCartas != "rojo" && colorCartas != "verde" && colorCartas != "azul") {
-			alert("COLOR ERRONEO. Color por defecto: amarillo.");
-			colorCartas = "amarillo";
-		}
-
-		var widthCarta = prompt("Como de ancha quieres la carta?");
-		var heightCarta = prompt("Como de alta quieres la carta?");
-
-		for (var i = 1; i <= numCartas; i++) {
-			document.write('<div class="' + colorCartas + '" style="width: ' + widthCarta + 'px; height: ' +heightCarta + 'px;">Carta ' + i + '</div>');
-		}
-
-
+		alert(ultimoDigito);
 
 	</script>
 	
