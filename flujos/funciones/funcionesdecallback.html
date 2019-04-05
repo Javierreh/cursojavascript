@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones de Callback</title>
+</head>
+<body>
+
+	<script>
+		
+		//es una funcion que se pasa como parametro de otra...
+
+		function saludar(pNombre) {
+			console.log('Hola' + pNombre);
+		}
+
+		// saludar('Javi');
+
+		// function getUser() {
+		// 	var nombreUsuario = "Pepe";
+		// 	return nombreUsuario;
+		// }
+
+		// saludar(getUser());
+
+
+		//funciones anonimas
+		//son funciones que no tienen nombre
+
+		// function() {
+
+		// }
+
+
+		var nombre = function() {
+			var usuario = "Maria";
+			return usuario;
+		}
+
+		saludar(nombre());
+
+	</script>
+	
+</body>
+</html>

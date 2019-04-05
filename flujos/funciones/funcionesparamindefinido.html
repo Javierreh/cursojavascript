@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones con parametros indefinidos</title>
+</head>
+<body>
+
+	<script>
+		
+		// function media(pNumero1, pNumero2) {
+			
+		// 	var resultado = (pNumero1 + pNumero2) / 2;
+
+		// 	return resultado;
+		// }
+
+
+		//arguments, es un listado
+
+		function media() {
+
+			var cantidad = arguments.length;
+			var suma = 0;
+			var media;
+
+			for (var i = 0; i < cantidad; i++) {
+				suma += arguments[i];
+			}
+
+			media = suma / cantidad;
+			console.log(media);
+		}
+
+		media(8, 10, 8, 10)
+
+	</script>
+	
+</body>
+</html>

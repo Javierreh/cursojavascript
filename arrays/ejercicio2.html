@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2 array simple</title>
+</head>
+<body>
+
+	<script>
+
+		//pintar un listado de html con solo los animales que empiezan por L
+
+		var listaAnimales = new Array('Leon', 'Marsupial', 'Aguila', 'Colibri', 'Hipopotamo', 'Lemur', 'Serpiente', 'Leopardo', 'Lechuza');
+		var cantidad = listaAnimales.length;
+		var lista = "<ul>";
+
+		for (var i = 0; i < cantidad; i++) {
+			if(listaAnimales[i][0] == "L") {
+				lista += '<li>' + listaAnimales[i] + '</li>';
+			}
+		}
+
+		lista += '</ul>';
+		document.write(lista);
+
+
+	</script>
+	
+</body>
+</html>

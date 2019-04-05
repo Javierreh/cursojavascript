@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+
+	<script>
+		
+		//pedir n numeros por pantalla, se parará de pedir numeros cuando pongamos la palabra FIN. Todos esos numeros se almacenarán en un listado. Para posteriormente sacarme escrito en el html el listado de pares y de impares. En dos listados separados
+
+		var numeros = new Array();
+		var intro;
+
+		while (intro != "FIN") {
+
+			intro = prompt("Introduce numeros. FIN para terminar");
+			numeros[numeros.length] = intro;
+
+		}
+		
+		console.log(numeros);
+
+		var listaImpares = "<h1>Lista de Impares</h1>";
+		var listaPares = "<h1>Lista de Pares</h1>";
+
+
+
+	</script>
+	
+</body>
+</html>

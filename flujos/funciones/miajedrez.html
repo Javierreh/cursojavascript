@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi tablero de ajedrez</title>
+</head>
+	<style>
+		body {
+			background-color: gray;
+		}
+
+		.row:after {
+			content: "";
+			clear: both;
+			display: block;
+			height: 0;
+		}
+
+		.row div {
+			float: left;
+		}
+
+	</style>
+
+<body>
+
+	<script>
+		
+		// var sizeCuadrado = prompt("Tamaño de cada cuadrado:");
+		// var cuadradosFila = prompt("Cuadrados por fila:");
+		// var color = prompt("Con que color empiezo?");
+		// var fila = "";
+		
+		// dibujarTablero(cuadradosFila);
+		
+
+		// function dibujarFila(pSize, pNumeroCuadrados, pColor) {
+
+		// 	for (var i = 1; i <= pNumeroCuadrados; i++) {
+
+		// 		if (pColor == "black") {
+		// 			var color = (i % 2 == 0) ? "white" : "black";
+		// 		}
+		// 		else {
+		// 			var color = (i % 2 == 0) ? "black" : "white";
+		// 		}
+
+		// 		fila += '<div style="width: ' + pSize + 'px; height: ' + pSize + 'px; background-color: ' + color + '"></div>'
+		// 	}
+
+		// 	document.write(fila);	
+		// }
+
+		// function dibujarTablero(pNumeroFilas) {
+		// 	for (var i = 1; i <= pNumeroFilas; i++) {
+
+		// 		document.write("<div class='row'>");
+
+		// 		if (color == "black") {
+		// 			dibujarFila(sizeCuadrado, cuadradosFila, color);
+		// 			color = "white";
+		// 		}
+		// 		else {
+		// 			dibujarFila(sizeCuadrado, cuadradosFila, color);
+		// 			color = "black";
+		// 		}
+				
+		// 		document.write("</div>");
+
+		// 		fila = "";
+		// 	}
+		// }
+
+
+//hacerlo luego con la funcion dibuja cuadrado
+
+		var sizeCuadrado = prompt("Tamaño de cada cuadrado:");
+		var cuadradosFila = prompt("Cuadrados por fila:");
+		var color = prompt("Con que color empiezo?");
+		var cuadrado = "";
+		var fila = "";
+		
+		dibujarTablero(cuadradosFila);
+		
+
+		function dibujarCuadrado(pSize, pColor) {
+			cuadrado = '<div style="width: ' + pSize + 'px; height: ' + pSize + 'px; background-color: ' + pColor + '"></div>';
+		}
+
+
+		function dibujarFila(pNumeroCuadrados, pColor) {
+
+			document.write("<div class='row'>");
+
+			for (var i = 1; i <= pNumeroCuadrados; i++) {
+				dibujarCuadrado(sizeCuadrado, color);
+				fila += cuadrado;
+				changeColor(color);
+			}
+
+			document.write(fila);
+			document.write("</div>");
+			fila = "";
+
+		}
+
+
+		function dibujarTablero(pNumeroFilas, pColor) {
+			for (var i = 1; i <= pNumeroFilas; i++) {
+				if (color == "white") {
+					dibujarFila(pNumeroFilas, color);
+					color = "black";
+				}
+				else {
+					dibujarFila(pNumeroFilas, color);
+					color = "white";
+				}
+			}
+		}
+
+		function changeColor(pColor) {
+			if (pColor == "black") {
+				color = "white";
+			}
+			else {
+				color = "black";
+			}
+		}
+
+
+	</script>
+	
+</body>
+</html>

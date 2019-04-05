@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+
+	<script>
+		
+		// realizar un funcion que reciba n numeros y me cree una cadena de caracteres con solo los numeros impares que reciba.
+
+
+		//quiero que si sale un 3 acabe el ejercicio
+
+		function magic() {
+			var cantidad = arguments.length;
+			var resultado = "";
+
+			for (var i = 0; i < cantidad; i++) {
+
+				if(arguments[i] == 3) {
+					break;
+				}
+				else if(arguments[i] % 2 != 0) {
+					resultado += arguments[i];
+				}
+			}
+
+			console.log(resultado);
+		}
+
+
+		magic(1, 23, 5, 6, 8, 9, 3, 4, 5, 2, 7); //1235957
+
+	</script>
+	
+</body>
+</html>

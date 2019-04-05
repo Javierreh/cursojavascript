@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays simples</title>
+</head>
+<body>
+
+	<script>
+
+	//los listados siempre se numeran de 0 a n-1 siendo n la longitud del array o lista
+		
+		var listaAlumnos = new Array();
+
+		listaAlumnos = ['Rocio', 'Javier', 'Victor', 'Ruben', 'David'];
+
+		var cantidad = listaAlumnos.length;
+
+		console.log(cantidad);
+
+		// console.log(listaAlumnos[0]);
+
+		listaAlumnos[2] = "Juan";
+
+		listaAlumnos[cantidad] = "Alba";
+		listaAlumnos[7] = "Esteban";
+		listaAlumnos[6] = "Raquel";
+
+		listaAlumnos.unshift("Mario");
+
+		console.log(listaAlumnos);
+
+	</script>
+	
+</body>
+</html>

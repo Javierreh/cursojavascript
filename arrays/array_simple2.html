@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array simple 2</title>
+</head>
+<body>
+
+	<script>
+		
+		var listaAlumnos = new Array();
+
+		listaAlumnos = ['Rocio', 'Javier', 'Victor', 'Ruben', 'David'];
+		var cantidad = listaAlumnos.length;
+		var lista = "<ul>";
+
+		
+		for (var i = 0; i < cantidad; i++) {
+			lista += '<li>' + listaAlumnos[i] + '</li>';
+		}
+
+		lista += "</ul>";
+		document.write(lista);
+
+	</script>
+	
+</body>
+</html>
