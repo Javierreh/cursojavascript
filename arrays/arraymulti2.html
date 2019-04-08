@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array Multidimensional</title>
+</head>
+<body>
+
+	<script>
+
+		//quisiera pintar en el html los listado del zoo por separado con sus titulos
+		
+		//array de arrays
+		var zoo = new Array();
+
+		var aves = new Array("Aguila", "Guacamayo", "Lechuza", "Colibrí");
+		var felinos = new Array("León", "Tigre", "Pantera");
+		var anfibios = new Array("Hipopotamo", "Rana", "Cocodrilo");
+
+		zoo = [felinos, aves, anfibios];
+
+		var contenido = "";
+
+
+		for (var i = 0; i < zoo.length; i++) {
+
+			switch(i) {
+				case 0:
+					contenido += "<h2>Felinos</h2>";
+				break;
+
+				case 1:
+					contenido += "<h2>Aves</h2>";
+				break;
+
+				case 2:
+					contenido += "<h2>Anfibios</h2>";
+				break;
+			}
+
+			contenido += "<ul>";
+
+			for (var j = 0; j < zoo[i].length; j++) {
+
+				contenido += "<li>" + zoo[i][j] + "</li>";
+				
+			}
+
+			contenido += "</ul>";
+
+		}
+
+		document.write(contenido);
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Método Contact</title>
+</head>
+<body>
+
+	<script>
+		
+		var verduras = new Array('Lechuga', 'Pimiento', 'Guisante');
+		var carnes = new Array('Pollo', 'Ternera');
+		var pescado = new Array('Lubina', 'Merluza');
+
+		var listaCompra = new Array();
+
+		//ejemplo 1:
+
+		listaCompra = carnes.concat(verduras);
+		console.log(listaCompra);
+
+
+		//ejemplo 2:
+
+		listaCompra = carnes.concat(verduras, pescado);
+		console.log(listaCompra);
+
+
+		//ejemplo 3:
+
+		listaCompra = carnes.concat(verduras).concat(pescado);
+		console.log(listaCompra);
+
+	</script>
+	
+</body>
+</html>

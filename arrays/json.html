@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto Json</title>
+</head>
+<body>
+
+	<script>
+		
+		var producto = {
+						titulo: 'Zapatillas Nike Air',
+						precio: 54.90,
+						'codigo': 'A343520',
+						'estado': true,
+						'talla': {
+									's': 12,
+									'm': 3,
+									'l': 1,
+									'xl': 0
+									} ,
+						'colores': {
+									'color1': 'Rojo',
+									'color2': 'Blanco'
+									},
+						'stockTotal': 16
+						};
+
+		console.log(producto);
+
+
+		//terminologia de corchete
+
+		console.log(producto['precio']);
+
+		//terminología de punto que es la que se ultiliza en los objetos, objeto.propiedad o atributo
+
+		console.log(producto.stockTotal);
+
+
+		for (var clave in producto) {
+
+			if (typeof(producto[clave]) == 'object') {
+				for(elemento in producto[clave]) {
+					console.log(clave + " " + elemento + ": " + producto[clave][elemento]);
+				}
+			}
+			else {
+				console.log(clave + ": " + producto[clave]);
+			}
+
+		}
+
+
+	</script>
+	
+</body>
+</html>

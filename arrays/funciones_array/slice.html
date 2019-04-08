@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Método Slice</title>
+</head>
+<body>
+
+	<script>
+		
+		//copiar parte del array
+
+		var listaAnimales = new Array('Leon', 'Perro', 'Gato', 'Cocodrilo', 'Caballo', 'Periquito');
+
+		var listaAnimalesDomesticos = new Array();
+
+		//slice me permite crear una copia de otro array eligiendo desde donde empiezo, hasta donde acabo, pero el elemento final no se contiene en el array resultante...
+
+
+		listaAnimalesDomesticos = listaAnimales.slice(1, 3);
+
+		console.log(listaAnimalesDomesticos);
+		console.log(listaAnimales);
+
+		//el ultimo elemento del array se cogeria de esta forma:
+
+		var ultimo = listaAnimales.slice(-1);
+
+		console.log(ultimo);
+
+		//
+
+		var otroListado = listaAnimales.slice(2, -1);
+
+		console.log(otroListado);
+
+		//
+
+		var otroListado2 = listaAnimales.slice(2, listaAnimales.length); 
+
+		console.log(otroListado2);
+
+		//
+
+		var otroListado3 = listaAnimales.slice(2, -2); //coge desde el dos por delante, y hasta el 2 por detras
+
+		console.log(otroListado3);
+
+
+		//lista animales domesticos con concat
+
+		var listaDomesticos = listaAnimales.slice(1, 3).concat(listaAnimales.slice(-1));
+
+		console.log(listaDomesticos);
+
+
+	</script>
+	
+</body>
+</html>

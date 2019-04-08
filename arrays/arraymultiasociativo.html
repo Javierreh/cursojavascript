@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays Multidimensional Asociativos</title>
+
+	<style>
+		
+		.ficha {
+			background-color: lightgray;
+			padding: 10px;
+			width: 31%;
+			border: 1px solid black;
+			text-align: center;
+			float: left;
+			margin: 1%;
+			box-sizing: border-box;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- 	<div class="ficha">
+		<h2>Nombre y apellido del alumno</h2><h3>Datos del alumno</h3><ul><li>Edad: edad</li><li>Nota: nota</li></ul>
+	</div> -->
+
+	<script>
+		
+		var listaAlumnos = new Array();
+
+		var alumno1 = { nombre: 'Javier',
+						apellido: 'Arroyo',
+						edad: 28,
+						nota: 8 };
+
+		var alumno2 = { nombre: 'Rocio',
+						apellido: 'Molero',
+						edad: 27,
+						nota: 5 };
+
+		var alumno3 = { nombre: 'Victor',
+						apellido: 'Soriano',
+						edad: 36,
+						nota: 4.5 };
+
+		var alumno4 = { nombre: 'Ruben',
+						apellido: 'Garcia',
+						edad: 32,
+						nota: 2 };
+
+		var alumno5 = { nombre: 'David',
+						apellido: 'Ovejero',
+						edad: 37,
+						nota: 0 };
+
+		var alumno6 = { nombre: 'Esteban',
+						apellido: 'Bennett',
+						edad: 31,
+						nota: 9 };
+
+		var alumno7 = { nombre: 'Raquel',
+						apellido: 'Garcia',
+						edad: 35,
+						nota: 6 };
+
+		var alumno8 = { nombre: 'Alba',
+						apellido: 'Santiago',
+						edad: 27,
+						nota: 5 };
+
+
+		listaAlumnos = [alumno1, alumno2, alumno3, alumno4, alumno5, alumno6, alumno7, alumno8];
+
+
+
+		// pintar el listado completo
+
+		function pintarListado(pLista) {
+
+			for (var i = 0; i < pLista.length; i++) {
+
+				var contenido = "<div class='ficha'>";
+
+				contenido += '<h2>' + pLista[i].nombre + ' ' + pLista[i].apellido + '</h2><h3>Datos del alumno</h3><ul><li>Edad: ' + pLista[i].edad + '</li><li>Nota: ' + pLista[i].nota + '</li></ul>';
+
+				contenido += "</div>";
+
+				document.write(contenido);
+
+			}
+
+		}
+
+		function getMenores30(pLista) {
+
+			var alumnosMenos30 = [];
+
+			for (var i = 0; i < pLista.length; i++) {
+
+				if (pLista[i].edad < 30) {
+
+					alumnosMenos30[alumnosMenos30.length] = pLista[i];
+				}
+
+			}
+
+			return alumnosMenos30;
+
+		}
+
+
+		// var listaFiltrada = getMenores30(listaAlumnos);
+
+		// pintarListado(listaFiltrada);
+
+
+		// o con funcion de callback:
+		// pintarListado(getMenores30(listaAlumnos));
+
+
+
+		//ahora una funcion que obtuviera la lista de alumnos aprobados
+
+
+		function getAprobados(pLista) {
+
+			var aprobados = [];
+
+			for (var i = 0; i < pLista.length; i++) {
+
+				if (pLista[i].nota >= 5) {
+
+					aprobados[aprobados.length] = pLista[i];
+
+				}
+
+			}
+
+			return aprobados;
+		}
+
+		// var listaFiltrada = getAprobados(listaAlumnos);
+
+		// pintarListado(listaFiltrada);
+
+		pintarListado(getAprobados(listaAlumnos));
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -10,21 +10,74 @@
 		
 		//pedir n numeros por pantalla, se parará de pedir numeros cuando pongamos la palabra FIN. Todos esos numeros se almacenarán en un listado. Para posteriormente sacarme escrito en el html el listado de pares y de impares. En dos listados separados
 
+		// var numeros = new Array();
+		// var intro;
+		// var listaImpares = "<h1>Lista de Impares</h1><ul>";
+		// var listaPares = "<h1>Lista de Pares</h1><ul>";
+
+
+		// do {
+		// 	intro = prompt("Introduce numeros. FIN para terminar");
+
+		// 	if (intro % 2 == 0) {
+				
+		// 		listaPares += '<li>' + intro + '</li>';
+
+		// 	}
+		// 	else{
+
+		// 		listaImpares += '<li>' + intro + '</li>';
+
+		// 	}
+
+		// 	// numeros[numeros.length] = intro;
+		// }
+		// while (intro != "FIN")
+
+		// 	listaImpares += '</ul>';
+		// 	listaPares += '</ul>';
+
+		// 	document.write(listaImpares);
+		// 	document.write(listaPares);
+		
+		// console.log(numeros);
+
+		
 		var numeros = new Array();
 		var intro;
+		var listaImpares = "<h1>Lista de Impares</h1><ul>";
+		var listaPares = "<h1>Lista de Pares</h1><ul>";
 
-		while (intro != "FIN") {
+
+		do {
 
 			intro = prompt("Introduce numeros. FIN para terminar");
-			numeros[numeros.length] = intro;
 
+			if (intro != "FIN") {
+				numeros[numeros.length] = intro;
+			}
+
+		} while (intro != "FIN");
+
+		for (var i = 0; i < numeros.length; i++) {
+
+			if (numeros[i] % 2 == 0) {
+				
+				listaPares += '<li>' + numeros[i] + '</li>';
+
+			}
+			else {
+
+				listaImpares += '<li>' + numeros[i] + '</li>';
+
+			}
 		}
-		
-		console.log(numeros);
 
-		var listaImpares = "<h1>Lista de Impares</h1>";
-		var listaPares = "<h1>Lista de Pares</h1>";
+		listaImpares += '</ul>';
+		listaPares += '</ul>';
 
+		document.write(listaImpares);
+		document.write(listaPares);
 
 
 	</script>
