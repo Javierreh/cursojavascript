@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Matemática</title>
+</head>
+<body>
+
+	<script>
+
+		// La suma de 1,45,3,2 es de 51, asi con cada operación
+		
+		function sumar() {
+			var suma = 0;
+			var imprimir = "La suma de ";
+			for (var i = 0; i < arguments.length; i++) {
+				suma += arguments[i];
+				(i != arguments.length-1) ? imprimir += arguments[i] + ", " : imprimir += arguments[i];
+			}
+			imprimir += " es de " + suma + "<br>";
+			document.write(imprimir);
+		}
+
+		function restar() {
+			var resta = arguments[0];
+			var imprimir = "La resta de " + arguments[0] + ", ";
+			for (var i = 1; i < arguments.length; i++) {
+				resta -= arguments[i];
+				(i != arguments.length-1) ? imprimir += arguments[i] + ", " : imprimir += arguments[i];
+			}
+			imprimir += " es de " + resta + "<br>";
+			document.write(imprimir);
+		}
+
+		function multiplicar() {
+			var multi = 1;
+			var imprimir = "La multiplicación de ";
+			for (var i = 0; i < arguments.length; i++) {
+				multi *= arguments[i];
+				(i != arguments.length-1) ? imprimir += arguments[i] + ", " : imprimir += arguments[i];
+			}
+			imprimir += " es de " + multi + "<br>";
+			document.write(imprimir);
+		}
+
+		function dividir(pNum1, pNum2) {
+			var division = pNum1 / pNum2;
+			var imprimir = "La division de " + pNum1 + " y " + pNum2 + " es de " + division + "<br>";
+			document.write(imprimir);
+		}
+
+		function elevar(pNum, pPotencia) {
+			var potencia = pNum ** pPotencia;
+			var imprimir = "El numero " + pNum + " elevado a " + pPotencia + " es " + potencia + "<br>";
+			document.write(imprimir);
+		}
+
+	</script>
+	
+</body>
+</html>

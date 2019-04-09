@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiplicación por suma</title>
+</head>
+<body>
+
+	<script>
+		
+		function multiPorSuma(pNum1, pNum2) {
+
+			var suma = 0;
+			var print = "";
+
+			for (var i = 1; i <= pNum2; i++) {
+
+				suma += pNum1;
+				
+				(i != pNum2) ? print += pNum1 + " + " : print += pNum1;
+
+			}
+
+			console.log(print + " = " + suma);
+		}
+
+	</script>
+	
+</body>
+</html>

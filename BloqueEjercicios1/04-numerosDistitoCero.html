@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numeros Distinto a 0</title>
+</head>
+<body>
+
+	<script>
+
+		var introNumero;
+		var listaNumeros = [];
+		var imprimir = "";
+		
+		do {
+
+			var introNumero = parseFloat(prompt("Introduce numeros distinto a 0. Usa 0 para terminar."));
+
+			if (introNumero != 0) {
+				listaNumeros.push(introNumero);
+			}
+
+		} while (introNumero != 0)
+
+		imprimir = "<h2>La cantidad de valores distinto a 0 es: " + listaNumeros.length + "</h2><ul>";
+
+		for (var i = 0; i < listaNumeros.length; i++) {
+			imprimir += "<li>" + listaNumeros[i] + "</li>";
+		}
+
+		imprimir += "</ul>";
+
+		document.write(imprimir); 
+		
+
+
+	</script>
+	
+</body>
+</html>

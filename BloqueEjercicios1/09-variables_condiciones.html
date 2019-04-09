@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variables y condiciones</title>
+</head>
+<body>
+
+	<script>
+
+		function condiciones(pVar1, pVar2, pVar3) {
+
+			if (pVar1 == 0 && pVar2 == 0 && pVar3 == 0) {
+				console.log("Todas las variables son cero.");
+			}
+
+			if (pVar1 > 0 && pVar2 > 0 && pVar3 > 0) {
+				console.log("Todas las variables son positivas.");
+			}
+
+
+			if (pVar1 > 0 && pVar2 > 0 && pVar3 > 0 || 
+				pVar1 < 0 && pVar2 < 0 && pVar3 < 0) {
+				console.log("Todas las variables tienen el mismo signo.");
+			}
+
+
+			if (pVar1 != pVar2 && pVar1 != pVar3 && pVar2 != pVar3) {
+				console.log("Todos sus valores son distintos.");
+			}
+
+
+			if (pVar1 == pVar2 || 
+				pVar1 == pVar3 || 
+				pVar2 == pVar3) {
+				console.log("Dos de sus valores coinciden.");
+			}
+
+			if (pVar1 == pVar2 && pVar1 != pVar3 || 
+				pVar1 == pVar3 && pVar1 != pVar2 || 
+				pVar2 == pVar3 && pVar2 != pVar1) {
+				console.log("Como máximo dos de sus valores coinciden.");
+			}
+
+			if (pVar2 > pVar1 && pVar2 < pVar3 || pVar2 < pVar1 && pVar2 > pVar3) {
+				console.log("El valor de " + pVar2 + " está comprendido entre los de " + pVar1 + " y " + pVar3 + ".");
+			}
+
+		}
+
+		
+
+	</script>
+	
+</body>
+</html>

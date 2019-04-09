@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numero Primo</title>
+</head>
+<body>
+
+	<script>
+		
+		function esPrimo(pNum) {
+
+			var primo = true;
+
+			for (var i = 2; i < pNum; i++) {
+
+				if (pNum % i == 0) {
+					primo = false;
+					break;
+				}
+
+			}
+
+			return primo;
+		}
+
+
+
+
+
+/*
+
+        function esPrimo(pNumero){
+            var primo = false;
+            var contador = 0;
+            for (var i = 1; i <= 6; i++) {
+                if (contador > 2){
+                    primo = false;
+                    break;
+                }else{
+                    (pNumero % i == 0) ? contador++ : '';
+                    primo = true;
+                }
+            }
+            return primo;
+        }
+
+*/
+
+
+
+//SOLUCION INCOMPLETA, el 11 se cuela como no primo
+
+			// if (pNum != 2 && pNum != 3 && pNum != 5) {
+
+			// 	if (pNum % 2 == 0 || pNum % 3 == 0 || pNum % 5 == 0) {
+			// 		primo = false;
+			// 	}
+
+			// }
+				
+			// if(primo) {
+			// 	console.log(pNum + " es primo.")
+			// }
+			// else {
+			// 	console.log(pNum + " NO es primo.")
+			// }
+
+	</script>
+	
+</body>
+</html>

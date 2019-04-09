@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array texto y numeros</title>
+</head>
+<body>
+
+	<script>
+		
+		var valores = ["buenas tardes", 5, 7, "hola", "adios", 2];
+
+		var mayorLongitud = 0;
+		var stringMayor = "";
+		var multi = 1;
+
+		for (var i = 0; i < valores.length; i++) {
+
+			if (typeof(valores[i]) == "string") {
+
+				if (mayorLongitud < valores[i].length) {
+					mayorLongitud = valores[i].length;
+					stringMayor = valores[i];
+				}
+				
+			}
+			else if (typeof(valores[i]) == "number") {
+				multi *= valores[i];
+			}
+
+		}
+
+		document.write("<h2>El texto de mayor longitud es: " + stringMayor + "</h2>");
+		document.write("<h2>La multiplicación de los elementos numericos es: " + multi + "</h2>");
+
+	</script>
+	
+</body>
+</html>
