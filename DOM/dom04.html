@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom 4: galeria de imagenes</title>
+	
+	<style>
+		
+		.galeria {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="galeria">
+		
+	</div>
+
+	<script>
+
+		var listaImagenes = new Array('images/raton.jpg', 'images/raton2.jpg', 'images/gato.jpg', 'images/perro1.jpg', 'images/arbol.jpg');
+
+		var galeria = document.getElementsByClassName('galeria');
+
+		for (imagen of listaImagenes) {
+			galeria[0].innerHTML += '<img src="' + imagen + '">';
+		}
+
+	</script>
+	
+</body>
+</html>

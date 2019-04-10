@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Listado</title>
+</head>
+<body>
+
+	<ul id="menu"></ul>
+
+	<ul id="otromenu"></ul>
+
+	<script>
+		// opción 1
+		var menu = document.getElementById('menu');
+
+		var listaSecciones = ['Home', 'Quienes Somos', 'Galeria', 'Pepe'];
+
+		for (var i = 0; i < listaSecciones.length; i++) {
+
+			menu.innerHTML += '<li>' + listaSecciones[i] + '</li>'
+
+		}
+
+
+		// opcion 2
+
+		var otroenu = document.getElementById('otromenu');
+
+		var otraListaSecciones = ['Home', 'About us', 'Gallery', 'Contact'];
+
+		for (seccion of otraListaSecciones) {
+			otromenu.innerHTML += '<li>' + seccion + '</li>';
+
+		}
+
+	</script>
+	
+</body>
+</html>

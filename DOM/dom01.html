@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 1</title>
+</head>
+<body>
+
+	<p>Juan</p>
+	<p>Javier <span>eeee</span></p>
+	<p>Rocio</p>
+
+	<script>
+		
+		var parrafos = document.getElementsByTagName('p');	
+
+		console.log(parrafos);
+
+		console.log(parrafos[1].innerText);
+
+		//outerHTML me devuelve el html completo con las etiquetas del propio elemento incluidas.
+
+		//innerHTML me devuelve	el html de dentro del elemento concreto, pero no las etiquetas del propio elemento
+
+		//innerText en este caso solo me devuelve el texto quitando cualquier posible etiqueta del html
+
+	</script>
+	
+</body>
+</html>

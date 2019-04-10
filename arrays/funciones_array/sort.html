@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Método Sort</title>
+</head>
+<body>
+
+	<script>
+		
+		// te ordena los elementos de un array segun el patrón que le des
+
+		//ordena alfebéticamente
+
+		var listaAnimales = new Array('León', 'Tigre', 'Lince', 'Elefante', 'Aguila');
+
+		var listaOrdenada = new Array();
+
+		listaOrdenada = listaAnimales.sort();
+		//te mofifica el array principal
+		console.log(listaOrdenada);
+		console.log(listaAnimales);
+
+		// para que no te modifique el el array principal:
+		// listaOrdenada = [...listaTemporal].sort();
+
+		// o tambien así
+		// var listaTemporal = listaAnimales.slice(0, listaAnimales.length);
+
+
+
+
+
+		//opción con números
+
+		var notas = new Array(2, 2.5, 5, 250, 4, 7, 8, 10, 3, 1, 11, 200);
+
+		// console.log(notas.sort()); // problmea porque hace una ordenacion por digito, 1, 10, 11, 2, 200...
+
+		// notas.sort(function(a, b) {
+		// 	return a - b;
+		// });
+		// console.log(notas);
+
+
+		// notas.sort((a, b) => a - b);
+
+		// console.log(notas);
+
+
+		notas.sort(function(a, b) {
+			console.log(b, a);
+			console.log(notas);
+			return a - b;
+		});
+		console.log(notas);
+
+
+	</script>
+	
+</body>
+</html>

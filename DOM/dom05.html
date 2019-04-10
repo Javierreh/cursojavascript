@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom 5: galeria de imagenes</title>
+	
+	<style>
+		
+		.galeria {
+			width: 300px;
+			/*margin: 0 auto;*/
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="galeria">
+		
+	</div>
+
+	<script>
+
+		var listaImagenes = new Array('images/raton.jpg', 'images/raton2.jpg', 'images/gato.jpg', 'images/perro1.jpg', 'images/arbol.jpg');
+
+		var galeria = document.getElementsByClassName('galeria');
+		var contador = 0;
+		var margin = 0;
+
+
+		function cambiarImagen(pImagen) {
+			galeria[0].innerHTML = '<img src="' + pImagen + '">';
+			contador = (contador < listaImagenes.length-1) ? contador+1 : 0;
+		}
+
+		var miIntervalo = setInterval(function() {
+
+			cambiarImagen(listaImagenes[contador]);
+
+		}, 500);
+
+		// clearInterval(miIntervalo);
+
+
+		function mover() {
+			margin += 15;
+			galeria[0].style.marginLeft = margin + "px"; 
+		}
+
+		var movimiento = setInterval(mover, 1000);
+
+	</script>
+	
+</body>
+</html>

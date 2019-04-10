@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 6</title>
+
+	<style>
+		
+		.rojo {
+			background-color: red;
+			color: white;
+			padding: 10px;
+			display: inline-block;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<ul id="menu">
+		<li><a href="https://www.yahoo.es">Yahoo</a></li>
+		<li><a href="https://www.google.es">Google</a></li>
+		<li><a href="https://www.amazon.es">Amazon</a></li>
+	</ul>
+
+	<ul>
+		<li><a href="https://www.neoland.es">Neoland</a></li>
+		<li><a href="https://www.neoland.es">Neoland</a></li>
+		<li><a href="https://www.neoland.es">Neoland</a></li>
+	</ul>
+
+	<script>
+
+		var menu = document.getElementById('menu');
+		var enlacesMenu = menu.getElementsByTagName('a');
+
+		for (enlace of enlacesMenu) {
+			enlace.href = "https://www.estudioclandestino.es";
+			enlace.className = "rojo";
+		}
+		
+
+
+	</script>
+	
+</body>
+</html>

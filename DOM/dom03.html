@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM por Class Name</title>
+</head>
+<body>
+
+	<img class="imagen" src="https://images.clarin.com/2019/01/19/BHaslG6vz_1256x620__1.jpg">
+
+	<img class="imagen" src="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/02/19/Recortada/img_asanchezm_20180220-122740_imagenes_lv_terceros_istock-637000686-620-keOD-U44908829125wIC-992x558@LaVanguardia-Web.jpg">
+
+	<img src="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/02/19/Recortada/img_asanchezm_20180220-122740_imagenes_lv_terceros_istock-637000686-620-keOD-U44908829125wIC-992x558@LaVanguardia-Web.jpg">
+
+	<script>
+		
+		var imagenes = document.getElementsByClassName("imagen");
+
+		console.log(imagenes);
+
+		imagenes[0].src = "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2016/05/27/14643729214028.jpg";
+
+		imagenes[0].alt = "RATON";
+
+		imagenes[0].style.width = "200px";
+
+	</script>
+	
+</body>
+</html>
