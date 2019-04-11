@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom 11</title>
+
+	<style>
+		
+		.lightbox {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: rgba(0,0,0,0.5);
+			width: 100%;
+			height: 100vh;
+		}
+
+		.lightbox .contenido {
+			width: 80%;
+			height: 300px;
+			background-color: white;
+			margin: 40px auto;
+			border: 2px solid black;
+			padding: 20px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="wrapper">
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias quasi ullam nesciunt animi distinctio quae numquam quod perspiciatis, aperiam eveniet autem similique sit, in nostrum, aut sint repudiandae quo!</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, facere fuga obcaecati doloribus, doloremque saepe harum reiciendis voluptas cupiditate laudantium fugit maiores. Accusamus dolore neque inventore alias incidunt asperiores earum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi repudiandae sed doloremque, beatae delectus illum iusto, recusandae quod sequi nostrum vel laudantium est harum provident vero maxime facere quisquam!</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt repellendus, ab necessitatibus quibusdam, nulla veritatis quia neque eveniet laudantium, labore vitae! Quod facilis minima harum numquam optio, dolorum enim alias?</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, magni ea sunt quibusdam dignissimos ex commodi voluptas ullam praesentium provident reiciendis. Veniam illum libero distinctio, rerum quidem hic necessitatibus, odio!</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, iure consequuntur voluptate, tempore repellendus quisquam. Inventore quo tempore ab voluptatum aliquid explicabo modi rerum illum in placeat. Magni, magnam vero?</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis totam adipisci voluptatibus nostrum laborum ducimus, odit praesentium voluptatum cum nisi labore! Mollitia, facilis rem pariatur eum ipsum voluptatibus id culpa.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolorum suscipit, soluta, fuga iure ex sint, sunt praesentium odio recusandae nisi sed esse. Nemo odio, ex quibusdam commodi distinctio debitis.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dolorum asperiores, veritatis ut sequi qui iusto repellat, porro sunt tempora corporis facere excepturi esse minima a aliquam minus. Architecto, facilis.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, odit, totam nam iure, corporis culpa consectetur, architecto facere illo distinctio excepturi fugiat corrupti atque eius labore itaque? Hic fugit, provident?</p>
+
+	</div>
+
+	<!-- <div class="lightbox">
+		<div class="contenido">
+			<h2>Titulo de la publicidad</h2>
+			<p>En un lugar de La Mancha de cuyo nombre no puedo acordarme...</p>
+		</div>
+	</div> -->
+
+	<script>
+		
+		var saltaPopUp = setInterval(crearPopUp, 3000);
+
+		function crearPopUp() {
+
+			//paso 1: crear el contenedor del lightbox
+
+			var lightbox = document.createElement('div');
+
+			//paso 2: asigno la clase al nuevo objeto
+
+			lightbox.className = "lightbox";
+
+			//paso 3: crear el div de contenido
+
+			var contenido = document.createElement('div');
+			contenido.className = "contenido";
+
+			var imagen = document.createElement('img');
+			imagen.src = "images/arbol.jpg";
+
+			//paso 4: creo el h2 y el p
+
+			var h2 = document.createElement('h2');
+			var p = document.createElement('p');
+
+			//paso 5: creo los texto de h2 y p
+
+			var textoh2 = document.createTextNode('El pop de juan mola mucho');
+
+			var textoP = document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eaque autem soluta alias, perspiciatis natus molestiae laboriosam sed, praesentium, blanditiis reiciendis! Totam voluptatem molestias inventore cupiditate, mollitia blanditiis error harum.');
+
+			//paso 6: meto los elementos partiendo del texto hacia fuera.
+
+			p.appendChild(textoP);
+			h2.appendChild(textoh2);
+
+			contenido.appendChild(h2);
+			contenido.appendChild(p);
+			contenido.appendChild(imagen);
+
+			lightbox.appendChild(contenido);
+
+			document.body.appendChild(lightbox);
+
+			clearInterval(saltaPopUp);
+		}
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crear Elementos</title>
+</head>
+<body>
+
+
+
+	<script>
+
+		function crearCajita(pNumeroCajitas) {
+
+			for (var i = 1; i <= pNumeroCajitas; i++) {
+
+				var cajita = document.createElement('div');
+				var texto = document.createTextNode(i);
+
+				cajita.style.color = "white";
+
+				cajita.style.width = "200px";
+				cajita.style.height = "30px";
+				cajita.style.backgroundColor = "black";
+				cajita.style.float = "left";
+				cajita.style.margin = "10px";
+				cajita.id = "cajita_" + i;
+
+				cajita.appendChild(texto);
+
+				document.body.appendChild(cajita);
+
+			}
+		}
+
+		crearCajita(21);
+		
+		// document.body.appendChild(cajita);
+		// cajita.parentNode.removeChild(cajita);
+
+
+		function borrarTodas(pNumero) {
+
+			var cajitas = document.querySelectorAll('div');
+
+			for (caja of cajitas) {
+				caja.parentNode.removeChild(caja);
+			}
+		}
+
+
+		function golpearCajita(pNumeroCaja) {
+
+			var cajaBorrar = document.querySelector('#cajita_' + pNumeroCaja);
+
+			cajaBorrar.parentNode.removeChild(cajaBorrar);
+
+		}
+
+	</script>
+	
+</body>
+</html>

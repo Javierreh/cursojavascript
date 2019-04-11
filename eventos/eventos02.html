@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event listeners</title>
+</head>
+<body>
+
+	<ul id="menu">
+		<li data-color="#0000ff" data-position="300px">Azul</li>
+		<li data-color="#00ff00" data-position="100px">Verde</li>
+		<li data-color="#ffff00" data-position="300px">Amarillo</li>
+	</ul>
+
+	<script>
+		
+		var menu = document.getElementById('menu');
+		var botones = menu.querySelectorAll('li');
+
+
+		for (boton of botones) {
+
+			boton.addEventListener('click', cambiarColor);
+
+		}
+
+		function cambiarColor(event) {
+			// console.log(event.target.dataset.color);
+			this.style.marginLeft = event.target.dataset.position;
+
+		}
+
+	</script>
+	
+</body>
+</html>

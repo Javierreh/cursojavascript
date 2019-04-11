@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom 12. Ejercicio DOM final</title>
+
+	<style>
+
+		.seccion {
+			max-width: 900px;
+			margin: 0 auto;
+		}	
+
+	</style>
+
+</head>
+<body>
+	
+	<div id="wrapper">
+		
+		<section>
+
+			<h2>Titulo de la seccion 1</h2>
+			
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate mollitia ut, laboriosam ea quisquam possimus, ipsa aliquid fuga, aliquam officia aspernatur fugit dolor adipisci iure esse perspiciatis quae quidem sed.</p>
+			</article>
+
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate mollitia ut, laboriosam ea quisquam possimus, ipsa aliquid fuga, aliquam officia aspernatur fugit dolor adipisci iure esse perspiciatis quae quidem sed.</p>
+			</article>
+
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate mollitia ut, laboriosam ea quisquam possimus, ipsa aliquid fuga, aliquam officia aspernatur fugit dolor adipisci iure esse perspiciatis quae quidem sed.</p>
+			</article>
+
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate mollitia ut, laboriosam ea quisquam possimus, ipsa aliquid fuga, aliquam officia aspernatur fugit dolor adipisci iure esse perspiciatis quae quidem sed.</p>
+			</article>
+
+		</section>
+
+	</div>
+
+
+	<script>
+
+		document.body.style.backgroundColor = "tomato";
+
+		//
+
+		// document.getElementsByTagName('section')[0].className = "seccion";
+		var sections = document.getElementsByTagName('section');
+		sections[0].className = "seccion";
+
+		//
+
+		var articulos = sections[0].getElementsByTagName('article');
+
+		var contador = 0;
+
+		for (articulo of articulos) {
+
+			articulo.style.width = "48%";
+			articulo.style.float = "left";
+			articulo.style.backgroundColor = "white";
+			articulo.style.margin = "1%";
+			articulo.style.padding = "10px";
+			articulo.style.boxSizing = "border-box";
+
+			//articulo.setAttribute('style', 'width: 48%; margin:.....')
+		
+			//
+			var imagen = articulo.querySelector('img');
+			imagen.style.width = "100%";
+			imagen.style.height = "300px"
+			imagen.src = "images/" + contador + ".jpg";
+
+			//
+
+			var enlace = document.createElement('a');
+			enlace.href = "articulo" + contador + ".html"
+			var textoEnlace = document.createTextNode('Leer más');
+
+			enlace.appendChild(textoEnlace);
+			// articulo.appendChild(enlace);
+
+			var parrafo = articulo.querySelector('p');
+
+			articulo.insertBefore(enlace, parrafo); //tenemos que poner el nodo para insertBefore (nodo que adjuntas, y el nodo que despues del que adjustas)
+
+			contador++;
+
+		}
+
+		//
+
+		
+		
+
+		// enlace.style.width = "80px";
+		// enlace.style.padding = "10px"
+		// enlace.style.border = "2px solid black";
+		// enlace.style.textAlign = "center";
+
+		
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

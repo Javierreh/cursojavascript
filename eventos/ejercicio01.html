@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pelotita</title>
+	
+	<style>
+
+		#pelotita {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border: 3px solid black;
+			border-radius: 50%;
+			position: relative;
+/*			top:100px;
+			left:0;*/
+
+		}
+
+		.tecla {
+			border: 1px solid black;
+			float:left;
+			padding: 25px;
+
+		}
+
+		.teclado {
+			/*margin-top: 100px;*/
+		}
+
+	</style>
+
+</head>
+<body>
+
+	
+
+	<div class="teclado">
+		
+			<div data-tecla="arriba" class="tecla">Arriba</div>
+			<div data-tecla="izquierda" class="tecla">Izquierda</div>
+			<div data-tecla="abajo" class="tecla">Abajo</div>
+			<div data-tecla="derecha" class="tecla">Derecha</div>
+			<div data-tecla="disparo" class="tecla">Disparo</div>
+
+		
+	</div>
+
+	<div id="pelotita"></div>
+
+	<script>
+		
+		var pelotita = document.getElementById("pelotita");
+		var teclas = document.querySelectorAll(".tecla");
+
+
+
+		for (tecla of teclas) {
+			tecla.addEventListener('click', moverPelota);
+		}
+
+		var mueveX = 0;
+		var mueveY = 0;
+
+
+		function moverPelota(event) {
+
+
+			switch(event.target.dataset.tecla) {
+				case "arriba":
+					mueveY += -10;
+					pelotita.style.top = mueveY + "px";
+				break;
+
+				case "izquierda":
+					mueveX += -10;
+					pelotita.style.left = mueveX + "px";
+				break;
+
+				case "abajo":
+					mueveY += 10;
+					pelotita.style.top = mueveY + "px";
+				break;
+
+				case "derecha":
+					mueveX += 10;
+					pelotita.style.left = mueveX + "px";
+				break;
+
+				case "disparo":
+					
+					alert("Bang");
+				break;
+			}
+			
+
+		}
+
+
+//RETO: que la pelota dispare una pequeña "bala";
+
+
+	</script>
+	
+</body>
+</html>
