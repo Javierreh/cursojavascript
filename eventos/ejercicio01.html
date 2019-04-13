@@ -13,9 +13,7 @@
 			border: 3px solid black;
 			border-radius: 50%;
 			position: relative;
-/*			top:100px;
-			left:0;*/
-
+			z-index: 99;
 		}
 
 		.tecla {
@@ -26,42 +24,42 @@
 		}
 
 		.teclado {
-			/*margin-top: 100px;*/
+			margin-top: 320px;
 		}
+
 
 	</style>
 
 </head>
 <body>
 
-	
+	<div id="pelotita"></div>
 
 	<div class="teclado">
 		
-			<div data-tecla="arriba" class="tecla">Arriba</div>
-			<div data-tecla="izquierda" class="tecla">Izquierda</div>
-			<div data-tecla="abajo" class="tecla">Abajo</div>
-			<div data-tecla="derecha" class="tecla">Derecha</div>
-			<div data-tecla="disparo" class="tecla">Disparo</div>
+		<div data-tecla="arriba" class="tecla">Arriba</div>
+		<div data-tecla="abajo" class="tecla">Abajo</div>
+		<div data-tecla="izquierda" class="tecla">Izquierda</div>
+		<div data-tecla="derecha" class="tecla">Derecha</div>
 
-		
+		<div data-tecla="disparo" class="tecla">Disparo</div>
+
 	</div>
 
-	<div id="pelotita"></div>
+	
 
 	<script>
 		
 		var pelotita = document.getElementById("pelotita");
 		var teclas = document.querySelectorAll(".tecla");
-
+		var mueveX = 0;
+		var mueveY = 0;
+		var balaEnMovimiento = 0;
 
 
 		for (tecla of teclas) {
 			tecla.addEventListener('click', moverPelota);
 		}
-
-		var mueveX = 0;
-		var mueveY = 0;
 
 
 		function moverPelota(event) {
@@ -89,16 +87,63 @@
 				break;
 
 				case "disparo":
-					
-					alert("Bang");
+					dispararBala();
 				break;
 			}
 			
+		}
+
+
+		function dispararBala() {
+
+			var bala = document.createElement('div');
+			var balaX = 100 + mueveX;
+			var balaY = 55 + mueveY;
+
+			bala.setAttribute('style', 'width: 20px; height: 10px; border: 2px solid black; background-color: gold; position: absolute; top: ' + balaY + 'px; left: ' + balaX + 'px');
+
+			document.body.appendChild(bala);
+
+			balaEnMovimiento = setInterval(function() {
+			
+			balaX += 10;
+			bala.style.left = balaX + "px";
+
+			if(balaX >= 500) {	
+				bala.remove();
+			}
+			
+			}, 50);
 
 		}
 
 
 //RETO: que la pelota dispare una pequeña "bala";
+
+
+
+		// la version del profesor
+
+		// function disparar() {
+		// 	var bala = document.createElement('div');
+		// 	bala.className = "bala";
+
+		// 	var xdisparo = pelotita.offsetLeft + pelota.clientWidth;
+		// 	var ydisparo = pelotita.offsetTop + (pelota.clientHeight / 2) - 5;
+
+		// 	bala.setAttribute('style', 'width: 20px; height: 10px; border: 2px solid black; background-color: gold; position: absolute; top: ' + ydisparo + 'px; left: ' + xdisparo + 'px');
+
+		// 	document.body.appendChild(bala);
+
+		// 	movimientobala = setInterval(function() { //movimientobala se crea globalmente, e igual a 0;
+
+		// 		xdisparo += 10;
+		// 		bala.style.left = xdisparo + "px";
+
+		// 	}, 500);
+
+		// }
+
 
 
 	</script>
