@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contar Vocales</title>
+</head>
+<body>
+
+	<script>
+		
+		var frase = prompt("Introduce una frase y te cuento las vocales");
+
+		var contador = 0;
+
+		for (var i = 0; i < frase.length; i++) {
+			if ("aeiou".includes(frase[i])) {
+				contador++;
+			}
+		}
+
+		alert("La frase tiene " + contador + " vocales.");
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Listado</title>
+</head>
+<body>
+
+	<script>
+		
+		var listado = new Array();
+
+		listado.push(	{nombre: "Javi Arroyo",
+						genero: "Hombre",
+						estado_civil: "Soltero",
+						numero_hijos: 0}
+					);
+
+		listado.push(	{nombre: "Pepe",
+						genero: "Hombre",
+						estado_civil: "Casado",
+						numero_hijos: 2}
+					);
+
+		listado.push(	{nombre: "Juan",
+						genero: "Hombre",
+						estado_civil: "Casado",
+						numero_hijos: 3}
+					);
+
+		listado.push(	{nombre: "Macarena",
+						genero: "Mujer",
+						estado_civil: "Soltero",
+						numero_hijos: 1}
+					);
+
+		listado.push(	{nombre: "Alicia",
+						genero: "Mujer",
+						estado_civil: "Soltero",
+						numero_hijos: 2}
+					);
+
+		listado.push(	{nombre: "Roberta",
+						genero: "Mujer",
+						estado_civil: "Casado",
+						numero_hijos: 3}
+					);
+
+
+		
+
+		function pintarListado(listado) {
+			var html = ""
+			for (var i = 0; i < listado.length; i++) {
+			
+				html += '<div>Nombre: ' + listado[i].nombre + ' | Genero: ' + listado[i].genero + ' | Estado Civil: ' + listado[i].estado_civil + ' | Número de hijos: ' + listado[i].numero_hijos + '</div><br/>';
+
+			}
+
+			document.write(html);
+
+		}
+
+
+		function filtrarFamiliaNumerosa() {
+
+			var listadoFiltrado = [];
+
+			for (var i = 0; i < listado.length; i++) {
+				if (listado[i].numero_hijos >= 3) {
+					listadoFiltrado.push(listado[i]);
+				}
+			}
+
+			pintarListado(listadoFiltrado);
+
+		}
+
+
+		function filtrarHombre() {
+
+			var listadoFiltrado = [];
+
+			for (var i = 0; i < listado.length; i++) {
+				if (listado[i].genero == "Hombre") {
+					listadoFiltrado.push(listado[i]);
+				}
+			}
+
+			pintarListado(listadoFiltrado);
+
+		}
+
+
+		function filtrarMujer() {
+
+			var listadoFiltrado = [];
+
+			for (var i = 0; i < listado.length; i++) {
+				if (listado[i].genero == "Mujer") {
+					listadoFiltrado.push(listado[i]);
+				}
+			}
+
+			pintarListado(listadoFiltrado);
+
+		}
+
+
+
+	</script>
+	
+</body>
+</html>

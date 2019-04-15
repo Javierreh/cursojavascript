@@ -8,11 +8,12 @@
 
 	<script>
 		
-		var cantidad = prompt("Dame una cantidad para sacar el iva.");
+		var cantidad = Number(prompt("Dame una cantidad para sacar el IVA."));
+		var iva = Number(prompt("Qué IVA le aplicamos?"));
 
-		const IVA = 0.21;
+		var resultado = ((cantidad * iva) / 100) + cantidad;
 
-		
+		document.write(resultado);
 
 	</script>
 	

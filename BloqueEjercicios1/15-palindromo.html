@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Palindromo</title>
+</head>
+<body>
+
+	<script>
+		
+		// var palin = "Dabale arroz a la zorra el abad";
+
+		var palin = prompt("Introduce una frase:")
+
+		palin = palin.toLowerCase().replace(/ /g,"");
+
+		palinReverse = palin.toLowerCase().replace(/ /g,"").split("").reverse().join("");
+
+		if (palin == palinReverse) {
+			alert("Es un palindromo!")
+		}
+		else {
+			alert("NO es un palindromo!!!")
+		}
+
+
+		// .split(",").join("")
+
+	</script>
+	
+</body>
+</html>
