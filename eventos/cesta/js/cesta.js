@@ -51,7 +51,7 @@ function getBolita() {
 
 	var bolita = document.createElement('div');
 
-	bolita.setAttribute('style', 'width: 25px; height: 25px; border: 2px solid black; border-radius: 50%; position: absolute; top: 0px; box-sizing: border-box;');
+	bolita.setAttribute('style', 'width: 25px; height: 25px; border: 2px solid black; border-radius: 50%; position: absolute; top: 0px;');
 	bolita.className = "bolita";
 
 	var randomBackgroundColor = getColor();
