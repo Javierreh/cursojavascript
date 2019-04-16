@@ -1,5 +1,6 @@
 var cesta = document.getElementById('cesta');
 var escenario = document.getElementById('escenario');
+
 var bolitas = document.getElementsByClassName('bolita');
 
 var scoreDisplay = document.getElementById('score');
