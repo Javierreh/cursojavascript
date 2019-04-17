@@ -31,3 +31,34 @@ function borrarTarea(pId) {
 	pintarTareas(listaTareas);
 
 }
+
+function filtrarTareas(pPrioridad) {
+	
+	var listaTemporal = new Array();
+
+	// for (tarea of listaTareas) {
+	// 	if (tarea.prioridad == pPrioridad) {
+	// 		listaTemporal.push(tarea);
+	// 	}
+	// }
+
+	listaTemporal = listaTareas.filter(function(tarea){
+		return tarea.prioridad == pPrioridad;
+	});
+
+	return listaTemporal;
+}
+
+function buscar(pPalabra) {
+
+	var listaTemporal = new Array();
+
+	var busqueda = pPalabra.toLowerCase();
+
+	for (tarea of listaTareas) {
+		if (tarea.titulo.toLowerCase().indexOf(busqueda) != -1) {
+			listaTemporal.push(tarea);
+		}
+	}
+	return listaTemporal;
+}

@@ -22,3 +22,41 @@ function recogerTarea(event) {
 	}
 
 }
+
+
+//fitros
+
+var filtroPrioridad = document.getElementById('prioridadFilter');
+
+filtroPrioridad.addEventListener('change', recogerPrioridad);
+
+function recogerPrioridad(event) {
+
+	// console.log(event.target.value);
+
+	var prioridad = event.target.value;
+
+	if (event.target.value != "") {
+		var listaFiltrada = filtrarTareas(prioridad);
+		pintarTareas(listaFiltrada);
+	}
+	else {
+		pintarTareas(listaTareas);
+	}
+
+}
+
+
+var busqueda = document.getElementById('search');
+
+busqueda.addEventListener('keyup', recogerBusqueda);
+
+function recogerBusqueda(event) {
+
+	var palabraBuscar = event.target.value;
+	
+	var listaBusqueda = buscar(palabraBuscar);
+
+	pintarTareas(listaBusqueda);
+
+}

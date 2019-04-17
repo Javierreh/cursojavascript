@@ -1,0 +1,25 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.blog {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blog article {
+	margin: 1%;
+	width: 31%;
+	padding: 15px;
+}
+
+.blog .impar {
+	background-color: #ddd;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
