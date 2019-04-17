@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estilos CSS modificados por jquery</title>
+	
+	<style>
+		
+		.cuadrado {
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			margin-bottom: 10px;
+		}		
+
+	</style>
+
+</head>
+<body>
+
+	<div class="cuadrado"></div>
+	<div class="cuadrado"></div>
+	<div class="cuadrado"></div>
+	<div class="cuadrado"></div>
+	<div class="cuadrado"></div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+		
+		// $('.cuadrado').css('border-radius', '50%')
+
+		$('.cuadrado').css({'border-radius': '50%', 
+							'background-color': 'red',
+							'border': '3px solid black'});
+
+	</script>
+
+</body>
+</html>

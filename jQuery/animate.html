@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate</title>
+	
+	<style>
+		.circulo {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: tomato;
+		}	
+	</style>
+
+</head>
+<body>
+
+		
+	<div class="circulo">
+	</div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+		
+	//$('.circulo').hide(1000);
+	//$('.circulo').show(1000);
+
+	//fade
+	//$('.circulo').fadeOut(1000);
+	//$('.circulo').fadeIn(1000);
+	// $('.circulo').fadeTo(1000, 0.2);
+	// $('.circulo').fadeToggle(1000, 0.2);
+
+	//slide
+	// $('.circulo').slideUp(1000).delay(3000);
+	// $('.circulo').slideDown(1000, saludar);
+
+	// function saludar() {
+	// 	alert("hola");
+	// }
+
+	// $('.circulo').animate({'margin-left': '300px', 'margin-top': '300px', 'border-radius': '0%'}, 2000);
+
+	$('.circulo').animate({'margin-left': '300px'}, 1500);
+	$('.circulo').animate({'margin-top': '300px'}, 1500);
+	$('.circulo').animate({'border-radius': '0%'}, 1500, cambiarColor);
+
+	function cambiarColor() {
+		$('.circulo').css({'background-color': 'blue', 'transition': '1s'});
+	}
+
+	</script>
+</body>
+</html>

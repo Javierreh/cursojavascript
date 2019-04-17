@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones de texto en jquery</title>
+</head>
+<body>
+
+	<div id="contenido">
+		
+		
+
+	</div>
+
+	<div id="contenido2">
+		
+
+	</div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+		
+		//si quiero cargar texto solo
+
+		$('#contenido').text('Hola k ase');
+		$('#contenido2').html(`<h2>Titulo de la caja</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem <strong>molestias</strong>, hic consequuntur, accusamus ipsam, reiciendis maxime sunt quasi rerum suscipit? Repellat amet sed, iusto. Vel tempora atque quibusdam, consequatur?</p>`);
+
+		//append añade un elemento renderizado nuevo
+
+		$('#contenido2').append('<a href="#">Enlace</a>');
+		
+
+	</script>
+</body>
+</html>
