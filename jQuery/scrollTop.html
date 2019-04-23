@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+
+	<style>
+		
+		#btn1 {
+			margin: 2550px 0 500px 0;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<button type="button" id="btn1">Consultar Scroll</button>
+
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+	
+	// $(window).scrollTop(pixeles)	
+
+	$('#btn1').on('click', function() {
+		var scroll = $(window).scrollTop();
+
+		alert(scroll)
+	});
+
+	</script>
+	
+</body>
+</html>

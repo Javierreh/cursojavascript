@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de refinamiento</title>
+</head>
+<body>
+
+	<div class="caja">Caja 1</div>
+	<div class="caja">Caja 2</div>
+	<div class="caja">Caja 3</div>
+	<div class="caja">Caja 4</div>
+	<div class="caja">Caja 5</div>
+	<div class="caja">Caja 6</div>
+	<div class="caja especial">Caja 7</div>
+	<div class="caja">Caja 8</div>
+	<div class="caja">Caja 9</div>
+	<div class="caja">Caja 10</div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+		
+		$('.caja').eq(2).text('He cambiado el texto de Caja 3');
+
+		$('.caja').not('.especial').css({'background-color': 'tomato', 'margin-bottom': '10px'});
+
+		// $('body').find('.especial').css({'background-color': 'blue', 'margin-bottom': '10px'});
+
+		$('.caja').parent().find('.especial').css({'background-color': 'blue', 'margin-bottom': '10px'});
+
+
+		$('.especial').prev().text("He cambiado el texto a la caja 6, desde la 7");
+
+		$('.especial').next().text("He cambiado el texto a la caja 8, desde la 7");
+
+	</script>
+	
+</body>
+</html>

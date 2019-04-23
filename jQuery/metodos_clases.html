@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de clases</title>
+
+	<style>
+
+		.rojo {
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Gestión de clases</h1>
+	<a href="http://www.google.es" id="btn1">Añadir clase .rojo</a>
+	<a href="" id="btn2">Quitar clase .rojo</a>
+	<a href="" id="btn3">Cambiar clase .rojo</a>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+	
+		//$('selector').addClass('nombreClase');
+		//$('selector').removeClass('nombreClase');
+		//$('selector').toggleClass('nombreClase');
+
+		$('#btn1').on('click', insertarClase);
+		$('#btn2').on('click', borrarClase);
+
+
+		$('#btn3').on('click', function() {
+			event.preventDefault();
+			$('h1').toggleClass('rojo');
+		});
+
+		function insertarClase(event) {
+			event.preventDefault();
+			$('h1').addClass('rojo');
+		}
+
+		function borrarClase() {
+			event.preventDefault();
+			$('h1').removeClass('rojo');
+		}
+
+
+	</script>
+	
+</body>
+</html>

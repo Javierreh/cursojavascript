@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Seleccion Objetos</title>
+	<style>
+		
+		.cuadrado {
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="cuadrado" data-color="blue"></div>
+	<div class="cuadrado" data-color="red"></div>
+	<div class="cuadrado" data-color="yellow"></div>
+	<div class="cuadrado" data-color="green"></div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+
+		//bucles con objetos en jQuery
+
+		// $('.cuadrado').each(cambiarColor);
+
+		// function cambiarColor() {
+		// 	var color = $(this).data('color');
+
+		// 	$(this).css('background-color', color);
+		// }
+
+		$('.cuadrado').each(function() {
+			var color = $(this).data('color');
+			$(this).css('background-color', color);
+		});
+		
+
+	</script>
+</body>
+</html>

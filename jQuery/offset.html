@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Offset</title>
+
+	<style>
+		
+		body {
+			padding: 50px;
+		}	
+		
+		h1 {
+			margin-bottom: 200px;
+		}
+
+		.caja {
+			background-color: darksalmon;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			border: 2px solid black;
+			margin-top: 50px;
+		}
+
+		.caja2 {
+			margin-top: 200%;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Obtener la produndidad del elemento</h1>
+	
+	<button type="button" id="btn1">Profundidad caja 1</button>
+	<button type="button" id="btn2">Profundidad caja 2</button>
+
+	<div class="caja caja1"></div>
+	<div class="caja caja2"></div>
+
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script>
+	
+		$('#btn1').on('click', function() {
+			var pixeles = $('.caja1').offset().top;
+			alert(pixeles);
+		});
+
+		$('#btn2').on('click', function() {
+			var pixeles = $('.caja2').offset().top;
+			alert(pixeles);
+		});
+
+	</script>
+	
+</body>
+</html>

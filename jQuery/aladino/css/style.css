@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	font-size: 50px;
+}
+
+ul li {
+	margin: 20px 20px 20px 0;
+	background-color: tomato;
+	text-align: right;
+	width: 120px;
+	color: white;
+	padding: 10px;
+	height: 70px;
+	margin-left: -30px;
+	/*transition: margin-left 1s;*/
+}
+
+/*ul li:hover {
+	margin-left: 0px;
+	transition: 1s;
+}*/
