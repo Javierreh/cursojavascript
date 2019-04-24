@@ -1,0 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ddd;
+}
+
+.contenedor {
+	width: 400px;
+	height: 400px;
+	cursor: pointer;
+	margin: 40px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.contenedor .info {
+	color: white;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 400px;
+	padding: 150px 20px;
+	background-color: rgba(0,0,0,0.7);
+	/*display: none;*/
+}
+
+.contenedor .imagen {
+	transition: transform 1s;
+}
+
+.rotar {
+	transform: rotateZ(20deg) scale(1.5);
+	transition: 1s;
+}

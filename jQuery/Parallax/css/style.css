@@ -1,0 +1,55 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../images/paisaje.jpg);
+	background-attachment: fixed;
+	background-position: center 0px;
+	/*background-size: 90%;*/
+}
+
+ul {
+	list-style: none;
+}
+
+.wrapper {
+	max-width: 500px;
+	margin: 40px auto;
+}
+
+.wrapper p {
+	margin-bottom: 90px;
+}
+
+.wrapper section {
+	background-color: rgba(0,0,0,0.6);
+	padding: 20px;
+	margin: 30px;
+	border-radius: 25px;
+	color: white;
+}
+
+.wrapper header {
+	margin-bottom: 40px;
+}
+
+.wrapper header nav ul li {
+	display: inline-block;
+}
+
+.wrapper header nav ul a {
+	display: block;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.wrapper header nav ul a:hover {
+	background-color: gray;
+	color: black;
+}
